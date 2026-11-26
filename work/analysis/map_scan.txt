@@ -1,0 +1,108 @@
+asset pack : work/cn/asset.apk
+shards     : 2605  (1,781,412,458 bytes)
+
+== shipped zone bundles (playable offline) ==
+  merged_mp_mgl_escape4                        in 025cf2e4c85105f8.shard shard  1,173,752 B
+  merged_mp_mgl_crash2                         in 02b5fda0d19a869e.shard shard  2,045,052 B
+  merged_global_stream_mp                      in 0b216835ecf31878.shard shard    564,216 B
+  merged_ingame_mp                             in 0ec0c91988dde926.shard shard    662,568 B
+  merged_mp_mgl_rust                           in 164449b0ee61636c.shard shard  1,527,076 B
+  merged_mlod2_r13_tr                          in 485afec08b2df8d3.shard shard    483,964 B
+  merged_24a526893012sh_0shbetbbravo123457892122calcaramel_1dlharlicl in 485afec08b2df8d3.shard shard    483,964 B
+  merged_mp_mgl_hardhat                        in 6dd313a8cac181c5.shard shard    708,652 B
+  merged_mlod3_auto4                           in 7006ff4b1cc5421d.shard shard    431,764 B
+  merged_mlod3_auto6                           in 7006ff4b1cc5421d.shard shard    431,764 B
+  merged_mp_frontend_mgl                       in b4207a94a12d3a0c.shard shard  1,172,164 B
+  merged_mlod2_r13_tr_bo33                     in e702b5a0c450c97e.shard shard    408,996 B
+  merged_ingame_base_mp                        in f8b7a2021e8d379a.shard shard  1,263,248 B
+  merged_mp_mgl_slaughterhouse                 in ff6ee719a35684d4.shard shard    717,292 B
+
+== mobile zone names present in data but NOT bundled (CDNI-only) ==
+  mp_don3_mobile
+  mp_mgl__basso_estateterminsv_petrograkstenosungulag_caveshostaginterceptshipmescape4mm_floatbahydrlonebm_tutsv_village2mission_escwartornuktenandonetskhigh_groundarn_zone1aism_penthouhardha_trapcryptem_decintfishtown_6v6
+  mp_mgl_br_mechanics
+  mp_mgl_catedral
+  mp_mgl_catedral_bg
+  mp_mgl_catet_gun_course
+  mp_mgl_crash2_bg
+  mp_mgl_crash2_interiors
+  mp_mgl_escape4_aps_e
+  mp_mgl_escape4_day
+  mp_mgl_escape4_int
+  mp_mgl_escape4_low_
+  mp_mgl_escape4_paths
+  mp_mgl_escape4_sepriininfildrop
+  mp_mgl_escape4_target_damaged
+  mp_mgl_farm_18
+  mp_mgl_farm_18_bg
+  mp_mgl_favela_alt
+  mp_mgl_favela_alt_bg
+  mp_mgl_fscripfr_fishing_verdan_s1_wrswaorsakwwlmarhaltest
+  mp_mgl_ftue_docdn_stub_mr
+  mp_mgl_ftue_downtown
+  mp_mgl_hardhat_bg
+  mp_mgl_hardhat_in_tunnle
+  mp_mgl_hardhat_interior
+  mp_mgl_hardhat_paths
+  mp_mgl_luxury
+  mp_mgl_rust_bg
+  mp_mgl_rust_pa
+  mp_mgl_rust_paths
+  mp_mgl_rust_playspace_high
+  mp_mgl_rust_playspace_low
+  mp_mgl_shipment_iw9
+  mp_mgl_shipment_iw9_bg
+  mp_mgl_slaughterhouse_bg
+  mp_mgl_slaughterhouse_paths
+  mp_mgl_slaughterhousedn_stub
+  mp_mgl_terminal
+  mp_mgl_terminal_bg
+  mp_mgl_ui_cdn_stubcdnrhamp_initial_uiccsdevice_low
+  mp_mgl_verdansk
+  mp_scrapyard_mobile
+
+== loading screens ==
+  loading_barvanillaheader
+  loading_cp_lone_bg_preview
+  loading_dock
+  loading_jup_0011
+  loading_jup_0011_preview
+  loading_mp_donetsk_bg
+  loading_mp_escape4_br_bg
+  loading_mp_luxury_bg
+  loading_mp_mgl_catedral_bg
+  loading_mp_mgl_crash2_bg
+  loading_mp_mgl_farm_18_bg
+  loading_mp_mgl_favela_alt_bg
+  loading_mp_mgl_hardhat_bg
+  loading_mp_mgl_rust_bg
+  loading_mp_mgl_shipment_iw9_bg
+  loading_mp_mgl_slaughterhouse_bg
+  loading_mp_mgl_terminal_bg
+  loading_mp_scrapyard_mobile_bg
+  loading_mp_shoothouse2_mobile_bg
+  loading_nova
+  loading_screen_card
+  loading_screen_card_wslide_warm_up
+  loading_screen_game_mode_h
+  loading_screen_game_mode_header
+  loading_screen_orientation_nova
+  loading_sr_mid
+  loading_wz_verdansk_pb_close_bg
+
+== localized map names ==
+  MAPNAME_CATEDRAL
+  MAPNAME_CRASH2
+  MAPNAME_DONETSK
+  MAPNAME_FARM_18
+  MAPNAME_FORSAKEN
+  MAPNAME_HARDHAT
+  MAPNAME_LUMBER
+  MAPNAME_LUXURY
+  MAPNAME_MP_JUP_SLAUGHTERHOUSE
+  MAPNAME_RUST
+  MAPNAME_SCRAPYARD
+  MAPNAME_SHIPMENT_IW9
+  MAPNAME_SHOOTHOUSE2
+  MAPNAME_SKYWAY_CAPS
+done

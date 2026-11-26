@@ -1,0 +1,137 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>WZM 3.10 Next 离线版 by BroNekoX</title>
+<style>
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:#0b1016;color:#e8eef5;font-family:-apple-system,"Noto Sans SC","PingFang SC",sans-serif;
+     display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card{width:min(92vw,780px);max-height:94vh;overflow-y:auto;background:#131b24;border:1px solid #1f2c39;
+      border-radius:clamp(10px,1.6vmin,18px);padding:clamp(12px,2.4vmin,26px) clamp(14px,2.8vmin,30px);
+      box-shadow:0 12px 40px rgba(0,0,0,.55)}
+h1{font-size:clamp(15px,2.9vmin,23px);margin:0 0 .2em;letter-spacing:.5px}
+.sub{color:#7c8b9a;font-size:clamp(10px,1.75vmin,14px);margin-bottom:clamp(8px,1.6vmin,16px)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:2vmin;
+     padding:clamp(4px,.95vmin,9px) 0;border-bottom:1px solid #1b2632}
+.row:last-of-type{border-bottom:none}
+.k{color:#8fa3b6;font-size:clamp(10px,1.9vmin,15px);white-space:nowrap;flex:0 0 auto}
+.v{font-weight:600;font-family:ui-monospace,SFMono-Regular,monospace;
+   font-size:clamp(10px,1.9vmin,15px);text-align:right;min-width:0;word-break:break-all}
+.bar{height:clamp(5px,.9vmin,9px);background:#1b2632;border-radius:6px;overflow:hidden;margin:clamp(6px,1.4vmin,14px) 0 clamp(2px,.5vmin,5px)}
+.fill{height:100%;width:0;background:linear-gradient(90deg,#2f7d4f,#57c785);transition:width .35s}
+.tip{color:#d3a72a;font-size:clamp(9px,1.65vmin,13px);line-height:1.45;margin:clamp(8px,1.6vmin,14px) 0;
+     padding:clamp(6px,1.2vmin,12px) clamp(8px,1.6vmin,14px);background:#1d1a10;border:1px solid #3a2f12;border-radius:8px}
+button{width:100%;padding:clamp(8px,1.7vmin,15px);font-size:clamp(11px,2.1vmin,16px);border:0;border-radius:8px;
+       background:#2a5a2a;color:#fff;font-weight:600}
+button:active{opacity:.85}
+.err{color:#ff8080;font-size:clamp(9px,1.6vmin,13px);margin-top:8px;min-height:1em}
+@media (max-aspect-ratio:1/1){.card{width:94vw}}
+</style>
+<div class="card">
+  <h1>WZM 3.10 Next 离线版 by BroNekoX</h1>
+  <div class="sub" id="sub">正在校验本地资源，通常 10~60 秒，请勿切走</div>
+
+  <div class="row"><span class="k">状态</span><span class="v" id="stage">—</span></div>
+  <div class="row"><span class="k">状态详情</span><span class="v" id="detail">—</span></div>
+  <div class="row"><span class="k">下载进度</span><span class="v" id="size">—</span></div>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <div class="row"><span class="k">登录校验</span><span class="v" id="fence">—</span></div>
+
+  <div class="tip" id="tip">非必要不要点下面的「跳过」。跳过会绕过资源校验，容易出现进图卡在加载阶段（ExitInstallStage）或闪退。</div>
+  <button id="continue">跳过（不推荐）</button>
+  <div class="err" id="err"></div>
+</div>
+<script>
+/* v14 卡片样式保留。逻辑要点：
+   1. 只有一个计时器，关闭 WebView 前先停表（重复 close 会让 native 的 destroyFunctor 崩）；
+   2. 每次 jsBridge 调用都 try/catch，回调抛异常会直接弄死页面；
+   3. 卡在"移动数据下载确认"时如实说明，而不是一直显示"正在校验"。 */
+(function () {
+  var state = {}, seq = 0, done = false, timer = null, waited = 0, cell = 0, autoDone = false;
+  var $ = function (id) { return document.getElementById(id); };
+  function fmt(n) {
+    if (n === null || n === undefined || n === '') return '—';
+    var v = Number(n);
+    if (!isFinite(v)) return String(n);
+    if (v >= 1073741824) return (v / 1073741824).toFixed(2) + ' GB';
+    if (v >= 1048576) return (v / 1048576).toFixed(1) + ' MB';
+    if (v >= 1024) return (v / 1024).toFixed(0) + ' KB';
+    return v + ' B';
+  }
+  function q(field) {
+    var cb = 'labQuery' + (++seq);
+    window[cb] = function (v) { state[field] = v; };
+    try { jsBridge.query('tos', field, cb); } catch (e) { delete window[cb]; }
+  }
+  function post(n) { try { jsBridge.post(n); } catch (e) {} }
+  var FIELDS = ['isPreloginFencePassed', 'isCDNIFinished', 'CDNIStateEnum', 'CDNIStateString',
+                'GetTotalSizeToDownload', 'GetDownloadedSizeInBytes', 'CDNICellularDownloadTip',
+                'CDNIPromptMessage'];
+  function isCellular() {
+    var e = state.CDNIStateEnum, s = String(state.CDNIStateString || '');
+    return e === 31 || /cellular/i.test(s) || state.CDNICellularDownloadTip === true;
+  }
+  function render() {
+    if (done) return;
+    $('stage').textContent = (state.CDNIStateEnum === undefined) ? '—' : String(state.CDNIStateEnum);
+    $('detail').textContent = state.CDNIStateString || '—';
+    $('fence').textContent = (state.isPreloginFencePassed === undefined) ? '—'
+      : (state.isPreloginFencePassed ? '已通过' : '等待中');
+    var got = Number(state.GetDownloadedSizeInBytes), tot = Number(state.GetTotalSizeToDownload);
+    if (isFinite(got) && isFinite(tot) && tot > 0) {
+      var pct = Math.max(0, Math.min(100, got / tot * 100));
+      $('size').textContent = fmt(got) + ' / ' + fmt(tot) + '（' + pct.toFixed(1) + '%）';
+      $('fill').style.width = pct + '%';
+    } else if (isFinite(got) && got > 0) {
+      $('size').textContent = fmt(got);
+      $('fill').style.width = '35%';
+    } else {
+      $('size').textContent = '0 B / ' + (tot > 0 ? fmt(tot) : '—');
+    }
+    if (isCellular()) cell++; else cell = 0;
+    if (cell > 20) {
+      var msg = state.CDNIPromptMessage;
+      var txt = '卡在「移动数据下载确认」：引擎在等"是否允许用移动数据下载"的答复，'
+        + '可选内容是佛丹斯克地图 + 语言包，共 ' + (tot > 0 ? fmt(tot) : '3.39 GB') + '。'
+        + '连上 Wi-Fi 后会自动继续，不用重开；连不上就只能点跳过（进图可能卡加载）。';
+      if (typeof msg === 'string' && msg.length > 0 && msg.length < 200) txt += ' 引擎提示：' + msg;
+      $('tip').textContent = txt + ' 已等待 ' + waited + ' 秒。';
+      $('sub').textContent = '正在等待网络确认，不是校验失败';
+    } else if (waited > 45) {
+      $('sub').textContent = '正在校验本地资源，已等待 ' + waited + ' 秒（首次启动 3~8 分钟属正常，两分钟无进展会自动放行）';
+    }
+    if (state.isCDNIFinished === true) setTimeout(finish, 600);
+  }
+  function finish() {
+    if (done) return;
+    done = true;
+    if (timer) { clearInterval(timer); timer = null; }
+    post('passPreloginFence');
+    setTimeout(function () { post('closeWebView'); }, 900);
+  }
+  var decline = ['cancelOptionalDownload', 'optionalDownloadCancel', 'declineCellularDownload',
+                 'CDNICellularDownloadTipClose', 'cellularDownloadDeclined'];
+  $('continue').onclick = function () {
+    for (var i = 0; i < decline.length; i++) post(decline[i]);
+    $('continue').disabled = true;
+    $('continue').textContent = '正在进入游戏…';
+    finish();
+  };
+  setTimeout(function () { post('sysReady'); post('passPreloginFence'); FIELDS.forEach(q); }, 600);
+  timer = setInterval(function () {
+    if (done) return;
+    waited++;
+    FIELDS.forEach(q);
+    render();
+    /* 卡住不动的兜底：两分钟还没结束且没有任何下载进展，就自己放行。
+       页面一直挂着等于把 prelogin 永远吊着，用户只会看到"进不去"。 */
+    var got = Number(state.GetDownloadedSizeInBytes) || 0;
+    if (waited > 120 && state.isCDNIFinished !== true && got <= 0 && !autoDone) {
+      autoDone = true;
+      post('passPreloginFence');
+      setTimeout(function () { post('closeWebView'); }, 800);
+    }
+  }, 1000);
+  window.addEventListener('pagehide', function () { if (timer) { clearInterval(timer); timer = null; } });
+  window.onerror = function () { return true; };
+})();
+</script>

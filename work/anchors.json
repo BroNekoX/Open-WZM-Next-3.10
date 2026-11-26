@@ -1,0 +1,1152 @@
+{
+ "0x51f008": {
+  "vaddr": "0x51f008",
+  "file_off": "0x51f008",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0x2f6c6464"
+  ],
+  "disasm": [],
+  "in_text": false
+ },
+ "0xf28f20": {
+  "vaddr": "0xf28f20",
+  "file_off": "0xf27f20",
+  "first_seen_line": 786,
+  "events": [
+   "mobile-loot-table-alias"
+  ],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "str x19, [sp, #0x10]",
+   "mov x29, sp",
+   "mov x19, x1",
+   "mov x1, x0",
+   "mov w0, #0x49"
+  ],
+  "in_text": true
+ },
+ "0x118ca08": {
+  "vaddr": "0x118ca08",
+  "file_off": "0x118ba08",
+  "first_seen_line": 775,
+  "events": [],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xd00260a0"
+  ],
+  "disasm": [
+   "adrp x0, #0x5da2000",
+   "add x0, x0, #0xdb8",
+   "ret",
+   "stp x29, x30, [sp, #-0x10]!",
+   "mov x29, sp",
+   "adrp x8, #0x5d8c000"
+  ],
+  "in_text": true
+ },
+ "0x119e908": {
+  "vaddr": "0x119e908",
+  "file_off": "0x119d908",
+  "first_seen_line": 776,
+  "events": [
+   "local-match-lobby-created"
+  ],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xd10143ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x50",
+   "stp x29, x30, [sp, #0x10]",
+   "stp x24, x23, [sp, #0x20]",
+   "stp x22, x21, [sp, #0x30]",
+   "stp x20, x19, [sp, #0x40]",
+   "add x29, sp, #0x10"
+  ],
+  "in_text": true
+ },
+ "0x12ee484": {
+  "vaddr": "0x12ee484",
+  "file_off": "0x12ed484",
+  "first_seen_line": 400,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0x14000002"
+  ],
+  "disasm": [
+   "b #0x12ee48c",
+   "mov x19, xzr",
+   "mov w8, #0xfd90",
+   "movk w8, #2, lsl #16",
+   "mov w9, #0xee0",
+   "madd x8, x26, x8, x27"
+  ],
+  "in_text": true
+ },
+ "0x134febc": {
+  "vaddr": "0x134febc",
+  "file_off": "0x134eebc",
+  "first_seen_line": 404,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0x3100041f"
+  ],
+  "disasm": [
+   "cmn w0, #1",
+   "b.eq #0x134ff18",
+   "stp x29, x30, [sp, #-0x20]!",
+   "str x19, [sp, #0x10]",
+   "mov x29, sp",
+   "ucvtf s0, x1"
+  ],
+  "in_text": true
+ },
+ "0x14434a4": {
+  "vaddr": "0x14434a4",
+  "file_off": "0x14424a4",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xd10283ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0xa0",
+   "stp x29, x30, [sp, #0x40]",
+   "stp x28, x27, [sp, #0x50]",
+   "stp x26, x25, [sp, #0x60]",
+   "stp x24, x23, [sp, #0x70]",
+   "stp x22, x21, [sp, #0x80]"
+  ],
+  "in_text": true
+ },
+ "0x1443974": {
+  "vaddr": "0x1443974",
+  "file_off": "0x1442974",
+  "first_seen_line": 791,
+  "events": [
+   "match-engine-error"
+  ],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xd10503ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x140",
+   "stp x29, x30, [sp, #0x100]",
+   "stp x28, x23, [sp, #0x110]",
+   "stp x22, x21, [sp, #0x120]",
+   "stp x20, x19, [sp, #0x130]",
+   "add x29, sp, #0x100"
+  ],
+  "in_text": true
+ },
+ "0x145c3ac": {
+  "vaddr": "0x145c3ac",
+  "file_off": "0x145b3ac",
+  "first_seen_line": 773,
+  "events": [],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "stp x20, x19, [sp, #0x10]",
+   "mov x29, sp",
+   "adrp x8, #0x6395000",
+   "ldr x8, [x8, #0x5e8]",
+   "adrp x9, #0x6395000"
+  ],
+  "in_text": true
+ },
+ "0x145c9f0": {
+  "vaddr": "0x145c9f0",
+  "file_off": "0x145b9f0",
+  "first_seen_line": 777,
+  "events": [
+   "local-match-lobby-created"
+  ],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xd10383ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0xe0",
+   "stp x29, x30, [sp, #0x80]",
+   "str x27, [sp, #0x90]",
+   "stp x26, x25, [sp, #0xa0]",
+   "stp x24, x23, [sp, #0xb0]",
+   "stp x22, x21, [sp, #0xc0]"
+  ],
+  "in_text": true
+ },
+ "0x1f64688": {
+  "vaddr": "0x1f64688",
+  "file_off": "0x1f63688",
+  "first_seen_line": 405,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0x3607f4c0"
+  ],
+  "disasm": [
+   "tbz w0, #0, #0x1f64520",
+   "mov w1, #4",
+   "mov w0, w23",
+   "bl #0x134febc",
+   "tbz w0, #0, #0x1f64520",
+   "mov w8, #4"
+  ],
+  "in_text": true
+ },
+ "0x20077a0": {
+  "vaddr": "0x20077a0",
+  "file_off": "0x20067a0",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "str x19, [sp, #0x10]",
+   "mov x29, sp",
+   "bl #0x369652c",
+   "mov x19, x0",
+   "cbz x0, #0x20077c8"
+  ],
+  "in_text": true
+ },
+ "0x20093ac": {
+  "vaddr": "0x20093ac",
+  "file_off": "0x20083ac",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xa9bc7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x40]!",
+   "stp x24, x23, [sp, #0x10]",
+   "stp x22, x21, [sp, #0x20]",
+   "stp x20, x19, [sp, #0x30]",
+   "mov x29, sp",
+   "mov x6, xzr"
+  ],
+  "in_text": true
+ },
+ "0x20e5690": {
+  "vaddr": "0x20e5690",
+  "file_off": "0x20e4690",
+  "first_seen_line": 772,
+  "events": [],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xd10183ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x60",
+   "stp x29, x30, [sp, #0x30]",
+   "str x21, [sp, #0x40]",
+   "stp x20, x19, [sp, #0x50]",
+   "add x29, sp, #0x30",
+   "mrs x21, tpidr_el0"
+  ],
+  "in_text": true
+ },
+ "0x2595250": {
+  "vaddr": "0x2595250",
+  "file_off": "0x2594250",
+  "first_seen_line": 310,
+  "events": [],
+  "comments": [
+   "reserving ID zero. It also detects resets after a mode change."
+  ],
+  "words": [
+   "0xaa0003f7"
+  ],
+  "disasm": [
+   "mov x23, x0",
+   "cbz x0, #0x2595368",
+   "mov w8, #7",
+   "mov x10, #0x4ec5",
+   "stur x28, [x23, #0xc]",
+   "strb w8, [x23]"
+  ],
+  "in_text": true
+ },
+ "0x259afc4": {
+  "vaddr": "0x259afc4",
+  "file_off": "0x2599fc4",
+  "first_seen_line": 326,
+  "events": [],
+  "comments": [
+   "Every patched site must reach both ends of the arena with a single B.",
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xd10183ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x60",
+   "stp x29, x30, [sp, #0x20]",
+   "str x23, [sp, #0x30]",
+   "stp x22, x21, [sp, #0x40]",
+   "stp x20, x19, [sp, #0x50]",
+   "add x29, sp, #0x20"
+  ],
+  "in_text": true
+ },
+ "0x259b634": {
+  "vaddr": "0x259b634",
+  "file_off": "0x259a634",
+  "first_seen_line": 388,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xd10143ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x50",
+   "stp x29, x30, [sp, #0x10]",
+   "str x23, [sp, #0x20]",
+   "stp x22, x21, [sp, #0x30]",
+   "stp x20, x19, [sp, #0x40]",
+   "add x29, sp, #0x10"
+  ],
+  "in_text": true
+ },
+ "0x259ba18": {
+  "vaddr": "0x259ba18",
+  "file_off": "0x259aa18",
+  "first_seen_line": 388,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xd101c3ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x70",
+   "stp x29, x30, [sp, #0x20]",
+   "str x25, [sp, #0x30]",
+   "stp x24, x23, [sp, #0x40]",
+   "stp x22, x21, [sp, #0x50]",
+   "stp x20, x19, [sp, #0x60]"
+  ],
+  "in_text": true
+ },
+ "0x368f014": {
+  "vaddr": "0x368f014",
+  "file_off": "0x368e014",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xb40000a0"
+  ],
+  "disasm": [
+   "cbz x0, #0x368f028",
+   "ldr x8, [x0, #0x10]",
+   "cbz x8, #0x368f028",
+   "ldrsb w0, [x8, #0x1e]",
+   "ret",
+   "mov w0, #-1"
+  ],
+  "in_text": true
+ },
+ "0x368f138": {
+  "vaddr": "0x368f138",
+  "file_off": "0x368e138",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "str x19, [sp, #0x10]",
+   "mov x29, sp",
+   "ldr w8, [x0, #8]",
+   "mov x19, x0",
+   "cmn w8, #1"
+  ],
+  "in_text": true
+ },
+ "0x368f390": {
+  "vaddr": "0x368f390",
+  "file_off": "0x368e390",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0x52800023"
+  ],
+  "disasm": [
+   "mov w3, #1",
+   "b #0x3695348",
+   "mov w3, #1",
+   "b #0x3695674",
+   "stp x29, x30, [sp, #-0x30]!",
+   "str x21, [sp, #0x10]"
+  ],
+  "in_text": true
+ },
+ "0x3690334": {
+  "vaddr": "0x3690334",
+  "file_off": "0x368f334",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xa9bf7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x10]!",
+   "mov x29, sp",
+   "ldr w8, [x0, #4]",
+   "mov x0, x1",
+   "mov w2, #1",
+   "mov w3, wzr"
+  ],
+  "in_text": true
+ },
+ "0x39c6bf8": {
+  "vaddr": "0x39c6bf8",
+  "file_off": "0x39c5bf8",
+  "first_seen_line": 414,
+  "events": [],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0xd100c3ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x30",
+   "stp x29, x30, [sp, #0x10]",
+   "stp x20, x19, [sp, #0x20]",
+   "add x29, sp, #0x10",
+   "mov x8, #0x7550",
+   "mov x9, #0x1038"
+  ],
+  "in_text": true
+ },
+ "0x3cf84c4": {
+  "vaddr": "0x3cf84c4",
+  "file_off": "0x3cf74c4",
+  "first_seen_line": 578,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xfc190fe8"
+  ],
+  "disasm": [
+   "str d8, [sp, #-0x70]!",
+   "stp x29, x30, [sp, #0x10]",
+   "stp x28, x27, [sp, #0x20]",
+   "stp x26, x25, [sp, #0x30]",
+   "stp x24, x23, [sp, #0x40]",
+   "stp x22, x21, [sp, #0x50]"
+  ],
+  "in_text": true
+ },
+ "0x3ee98fc": {
+  "vaddr": "0x3ee98fc",
+  "file_off": "0x3ee88fc",
+  "first_seen_line": 571,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xf00523e0"
+  ],
+  "disasm": [
+   "adrp x0, #0xe368000",
+   "add x0, x0, #0xa20",
+   "ret",
+   "sub sp, sp, #0x120",
+   "stp x29, x30, [sp, #0xc0]",
+   "stp x28, x27, [sp, #0xd0]"
+  ],
+  "in_text": true
+ },
+ "0x3f97164": {
+  "vaddr": "0x3f97164",
+  "file_off": "0x3f96164",
+  "first_seen_line": 570,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0x90052b68"
+  ],
+  "disasm": [
+   "adrp x8, #0xe503000",
+   "ldr x0, [x8, #0xe28]",
+   "ret",
+   "sub sp, sp, #0x90",
+   "str d8, [sp, #0x40]",
+   "stp x29, x30, [sp, #0x48]"
+  ],
+  "in_text": true
+ },
+ "0x4070928": {
+  "vaddr": "0x4070928",
+  "file_off": "0x406f928",
+  "first_seen_line": 661,
+  "events": [],
+  "comments": [
+   "before any loot has added those weapons to the server's live weapon map."
+  ],
+  "words": [
+   "0xd10203ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x80",
+   "stp x29, x30, [sp, #0x30]",
+   "str x25, [sp, #0x40]",
+   "stp x24, x23, [sp, #0x50]",
+   "stp x22, x21, [sp, #0x60]",
+   "stp x20, x19, [sp, #0x70]"
+  ],
+  "in_text": true
+ },
+ "0x4070b64": {
+  "vaddr": "0x4070b64",
+  "file_off": "0x406fb64",
+  "first_seen_line": 721,
+  "events": [],
+  "comments": [
+   "for slots it placed in this private BR session."
+  ],
+  "words": [
+   "0xfc190fe8"
+  ],
+  "disasm": [
+   "str d8, [sp, #-0x70]!",
+   "stp x29, x30, [sp, #0x10]",
+   "stp x28, x27, [sp, #0x20]",
+   "stp x26, x25, [sp, #0x30]",
+   "stp x24, x23, [sp, #0x40]",
+   "stp x22, x21, [sp, #0x50]"
+  ],
+  "in_text": true
+ },
+ "0x40789c0": {
+  "vaddr": "0x40789c0",
+  "file_off": "0x40779c0",
+  "first_seen_line": 498,
+  "events": [],
+  "comments": [
+   "Map-specific fixed-squad placement through the original server teleport path."
+  ],
+  "words": [
+   "0xa9ba7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x60]!",
+   "stp x28, x27, [sp, #0x10]",
+   "stp x26, x25, [sp, #0x20]",
+   "stp x24, x23, [sp, #0x30]",
+   "stp x22, x21, [sp, #0x40]",
+   "stp x20, x19, [sp, #0x50]"
+  ],
+  "in_text": true
+ },
+ "0x407ff18": {
+  "vaddr": "0x407ff18",
+  "file_off": "0x407ef18",
+  "first_seen_line": 451,
+  "events": [],
+  "comments": [
+   "Map-specific fixed-squad placement through the original server teleport path."
+  ],
+  "words": [
+   "0xa9bd7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x30]!",
+   "str x21, [sp, #0x10]",
+   "stp x20, x19, [sp, #0x20]",
+   "mov x29, sp",
+   "ldr x8, [x1, #0x168]",
+   "ldr s0, [x2]"
+  ],
+  "in_text": true
+ },
+ "0x40a4a90": {
+  "vaddr": "0x40a4a90",
+  "file_off": "0x40a3a90",
+  "first_seen_line": 508,
+  "events": [],
+  "comments": [
+   "bot attacks against an already-downed player are rejected."
+  ],
+  "words": [
+   "0xd10683ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x1a0",
+   "str d8, [sp, #0x130]",
+   "stp x29, x30, [sp, #0x140]",
+   "stp x28, x27, [sp, #0x150]",
+   "stp x26, x25, [sp, #0x160]",
+   "stp x24, x23, [sp, #0x170]"
+  ],
+  "in_text": true
+ },
+ "0x40ab14c": {
+  "vaddr": "0x40ab14c",
+  "file_off": "0x40aa14c",
+  "first_seen_line": 573,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xa9bb7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x50]!",
+   "str x25, [sp, #0x10]",
+   "stp x24, x23, [sp, #0x20]",
+   "stp x22, x21, [sp, #0x30]",
+   "stp x20, x19, [sp, #0x40]",
+   "mov x29, sp"
+  ],
+  "in_text": true
+ },
+ "0x40ee7c0": {
+  "vaddr": "0x40ee7c0",
+  "file_off": "0x40ed7c0",
+  "first_seen_line": 572,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xd10383ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0xe0",
+   "stp x29, x30, [sp, #0x80]",
+   "stp x28, x27, [sp, #0x90]",
+   "stp x26, x25, [sp, #0xa0]",
+   "stp x24, x23, [sp, #0xb0]",
+   "stp x22, x21, [sp, #0xc0]"
+  ],
+  "in_text": true
+ },
+ "0x458de38": {
+  "vaddr": "0x458de38",
+  "file_off": "0x458ce38",
+  "first_seen_line": 539,
+  "events": [],
+  "comments": [
+   "Original execution animation/transform functions are not replaced."
+  ],
+  "words": [
+   "0xbd02cf80"
+  ],
+  "disasm": [
+   "str s0, [x28, #0x2cc]",
+   "b.eq #0x458df84",
+   "ldr w0, [x20, x21]",
+   "mov w1, #0x14",
+   "fmov s0, w23",
+   "bl #0x154f100"
+  ],
+  "in_text": true
+ },
+ "0x45a3d08": {
+  "vaddr": "0x45a3d08",
+  "file_off": "0x45a2d08",
+  "first_seen_line": 576,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xa9bd7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x30]!",
+   "str x21, [sp, #0x10]",
+   "stp x20, x19, [sp, #0x20]",
+   "mov x29, sp",
+   "ldr x21, [x0, #8]",
+   "ldrh w8, [x1, #0x964]"
+  ],
+  "in_text": true
+ },
+ "0x45a4bfc": {
+  "vaddr": "0x45a4bfc",
+  "file_off": "0x45a3bfc",
+  "first_seen_line": 574,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xa9bc7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x40]!",
+   "stp x28, x23, [sp, #0x10]",
+   "stp x22, x21, [sp, #0x20]",
+   "stp x20, x19, [sp, #0x30]",
+   "mov x29, sp",
+   "sub sp, sp, #0x310"
+  ],
+  "in_text": true
+ },
+ "0x45b9f58": {
+  "vaddr": "0x45b9f58",
+  "file_off": "0x45b8f58",
+  "first_seen_line": 575,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xd102c3ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0xb0",
+   "stp x29, x30, [sp, #0x70]",
+   "stp x24, x23, [sp, #0x80]",
+   "stp x22, x21, [sp, #0x90]",
+   "stp x20, x19, [sp, #0xa0]",
+   "add x29, sp, #0x70"
+  ],
+  "in_text": true
+ },
+ "0x46c5720": {
+  "vaddr": "0x46c5720",
+  "file_off": "0x46c4720",
+  "first_seen_line": 577,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0xa9bd7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x30]!",
+   "str x28, [sp, #0x10]",
+   "stp x20, x19, [sp, #0x20]",
+   "mov x29, sp",
+   "sub sp, sp, #0x3f0",
+   "mrs x20, tpidr_el0"
+  ],
+  "in_text": true
+ },
+ "0x47d9c6c": {
+  "vaddr": "0x47d9c6c",
+  "file_off": "0x47d8c6c",
+  "first_seen_line": 395,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xa9422009"
+  ],
+  "disasm": [
+   "ldp x9, x8, [x0, #0x20]",
+   "sub x8, x8, x9",
+   "lsr x0, x8, #3",
+   "ret",
+   "stp x29, x30, [sp, #-0x20]!",
+   "stp x20, x19, [sp, #0x10]"
+  ],
+  "in_text": true
+ },
+ "0x47d9c7c": {
+  "vaddr": "0x47d9c7c",
+  "file_off": "0x47d8c7c",
+  "first_seen_line": 395,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "stp x20, x19, [sp, #0x10]",
+   "mov x29, sp",
+   "mov x19, x0",
+   "tbnz w1, #0x1f, #0x47d9cec",
+   "ldp x9, x8, [x19, #0x20]"
+  ],
+  "in_text": true
+ },
+ "0x47dbd60": {
+  "vaddr": "0x47dbd60",
+  "file_off": "0x47dad60",
+  "first_seen_line": 397,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xd100c3ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x30",
+   "stp x29, x30, [sp, #0x10]",
+   "stp x20, x19, [sp, #0x20]",
+   "add x29, sp, #0x10",
+   "mov x19, x2",
+   "subs w8, w1, #1"
+  ],
+  "in_text": true
+ },
+ "0x47dcb60": {
+  "vaddr": "0x47dcb60",
+  "file_off": "0x47dbb60",
+  "first_seen_line": 396,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "stp x20, x19, [sp, #0x10]",
+   "mov x29, sp",
+   "mov x19, x0",
+   "cbz x1, #0x47dcbb4",
+   "ldr x8, [x19, #0x10]"
+  ],
+  "in_text": true
+ },
+ "0x47dd3f4": {
+  "vaddr": "0x47dd3f4",
+  "file_off": "0x47dc3f4",
+  "first_seen_line": 396,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks."
+  ],
+  "words": [
+   "0xd10103ff"
+  ],
+  "disasm": [
+   "sub sp, sp, #0x40",
+   "stp x29, x30, [sp, #0x10]",
+   "stp x22, x21, [sp, #0x20]",
+   "stp x20, x19, [sp, #0x30]",
+   "add x29, sp, #0x10",
+   "mrs x22, tpidr_el0"
+  ],
+  "in_text": true
+ },
+ "0x47ded18": {
+  "vaddr": "0x47ded18",
+  "file_off": "0x47ddd18",
+  "first_seen_line": 397,
+  "events": [],
+  "comments": [
+   "caller temporarily suppresses normal Interceptor callbacks.",
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0xa9be7bfd"
+  ],
+  "disasm": [
+   "stp x29, x30, [sp, #-0x20]!",
+   "stp x20, x19, [sp, #0x10]",
+   "mov x29, sp",
+   "ldr x19, [x0, #0x10]",
+   "cbz w3, #0x47ded4c",
+   "subs w9, w3, #1"
+  ],
+  "in_text": true
+ },
+ "0x56579d0": {
+  "vaddr": "0x56579d0",
+  "file_off": "0x56559d0",
+  "first_seen_line": 587,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0x00000000"
+  ],
+  "disasm": [
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0"
+  ],
+  "in_text": false
+ },
+ "0x5657e08": {
+  "vaddr": "0x5657e08",
+  "file_off": "0x5655e08",
+  "first_seen_line": 497,
+  "events": [],
+  "comments": [
+   "Map-specific fixed-squad placement through the original server teleport path.",
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0x00000000"
+  ],
+  "disasm": [
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0"
+  ],
+  "in_text": false
+ },
+ "0x5657e70": {
+  "vaddr": "0x5657e70",
+  "file_off": "0x5655e70",
+  "first_seen_line": 588,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0x00000000"
+  ],
+  "disasm": [
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0"
+  ],
+  "in_text": false
+ },
+ "0x5657ea8": {
+  "vaddr": "0x5657ea8",
+  "file_off": "0x5655ea8",
+  "first_seen_line": 589,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0x00000000"
+  ],
+  "disasm": [
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0"
+  ],
+  "in_text": false
+ },
+ "0x5658b98": {
+  "vaddr": "0x5658b98",
+  "file_off": "0x5656b98",
+  "first_seen_line": 774,
+  "events": [],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [
+   "0x00000000"
+  ],
+  "disasm": [
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0"
+  ],
+  "in_text": false
+ },
+ "0x566a038": {
+  "vaddr": "0x566a038",
+  "file_off": "0x5668038",
+  "first_seen_line": 579,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [
+   "0x00000000"
+  ],
+  "disasm": [
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0",
+   "udf #0"
+  ],
+  "in_text": false
+ },
+ "0x569b560": {
+  "vaddr": "0x569b560",
+  "file_off": "0x5698560",
+  "first_seen_line": 441,
+  "events": [
+   "helmet-rule-direct-ddl-installed"
+  ],
+  "comments": [
+   "allocating an intermediate engine string (which became invalid in a later run)."
+  ],
+  "words": [
+   "0x00000001"
+  ],
+  "disasm": [
+   "udf #1",
+   "udf #0",
+   "cbnz x23, #0x5633e30"
+  ],
+  "in_text": false
+ },
+ "0xb7e0958": {
+  "vaddr": "0xb7e0958",
+  "file_off": "0x0",
+  "first_seen_line": 804,
+  "events": [],
+  "comments": [
+   "equip. Submit a copy with the gun descriptor through normal input."
+  ],
+  "words": [],
+  "disasm": [],
+  "in_text": false
+ },
+ "0xc67fcb4": {
+  "vaddr": "0xc67fcb4",
+  "file_off": "0x0",
+  "first_seen_line": 309,
+  "events": [],
+  "comments": [
+   "reserving ID zero. It also detects resets after a mode change."
+  ],
+  "words": [],
+  "disasm": [],
+  "in_text": false
+ },
+ "0xc67fd58": {
+  "vaddr": "0xc67fd58",
+  "file_off": "0x0",
+  "first_seen_line": 309,
+  "events": [],
+  "comments": [
+   "reserving ID zero. It also detects resets after a mode change."
+  ],
+  "words": [],
+  "disasm": [],
+  "in_text": false
+ },
+ "0xc6ffd60": {
+  "vaddr": "0xc6ffd60",
+  "file_off": "0x0",
+  "first_seen_line": 309,
+  "events": [],
+  "comments": [
+   "reserving ID zero. It also detects resets after a mode change."
+  ],
+  "words": [],
+  "disasm": [],
+  "in_text": false
+ },
+ "0xe0aabd0": {
+  "vaddr": "0xe0aabd0",
+  "file_off": "0x0",
+  "first_seen_line": 590,
+  "events": [],
+  "comments": [
+   "Called by Lab when it creates a local lobby. Use the server's game clock."
+  ],
+  "words": [],
+  "disasm": [],
+  "in_text": false
+ }
+}

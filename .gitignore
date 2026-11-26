@@ -1,0 +1,13 @@
+# Never commit game data, build outputs or keys.
+work/libs/
+work/out/
+work/tmp/
+work/new/
+release/
+*.apk
+*.apks
+*.xapk
+*.so
+*.idsig
+__pycache__/
+.venv/
