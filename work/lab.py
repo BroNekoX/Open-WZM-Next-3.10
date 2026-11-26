@@ -23,6 +23,7 @@ import sys
 import time
 import json
 import zipfile
+import zlib
 
 ADB = 'work/tools/platform-tools/adb.exe'
 SERIAL = '6058fbe3'
@@ -104,6 +105,16 @@ def show(doc, pretty=True):
     return 0
 
 
+def _crc(path):
+    c = 0
+    with open(path, 'rb') as f:
+        while True:
+            b = f.read(1 << 22)
+            if not b:
+                return c & 0xFFFFFFFF
+            c = zlib.crc32(b, c)
+
+
 def install(apks):
     if not os.path.exists(apks):
         sys.exit('missing ' + apks)
@@ -116,7 +127,10 @@ def install(apks):
                 continue
             dst = os.path.join(work, n)
             info = z.getinfo(n)
-            if not (os.path.exists(dst) and os.path.getsize(dst) == info.file_size):
+            # size alone is not enough: two different builds can land on the same
+            # byte count (zipalign padding), so compare the CRC before reusing.
+            if not (os.path.exists(dst) and os.path.getsize(dst) == info.file_size
+                    and _crc(dst) == info.CRC):
                 with z.open(n) as s, open(dst, 'wb') as d:
                     shutil.copyfileobj(s, d, 1 << 22)
             paths.append(dst)
